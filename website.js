@@ -28,21 +28,14 @@ function addRecord() {
   inp.value = "";
   blah.value="";
   document.getElementById("expense_added").innerHTML = category.join("<br/> ");
-
-function sum(){
-    if(sessionStorage.length > 0){
-        var sum = 0;
-        for (var i=0, len=sessionStorage.length; i<len; i++){
-            var key = sessionStorage.key(i);
-            var val = sessionStorage.getItem(key);
-            var valu = val.split("*");
-            sum += parseInt(valu[0]);
-            total.innerHTML="- $ "+sum;
-
-          }
-      }
-};
-total.innerHTML="- $ 0";
+  document.getElementById("expense_added2").innerHTML = "$"+expense.join("<br/>")
+  console.log(expense)
+  document.getElementById("total").innerHTML = "Total: - $"+expense.reduce(myFunc);
+  document.getElementById("expense_total").innerHTML = "$"+expense.reduce(myFunc);
+  function myFunc(total, expense) {
+  return Number(total) + Number(expense);
+  }
+  }
 
 
 window.addEventListener('load', add_Expense, false)
