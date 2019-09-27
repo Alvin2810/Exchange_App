@@ -18,26 +18,16 @@ function saveExpense(){
 
 
 
-function display(){
-  var expense_added=document.getElementById('expense_added');
-  var total=document.getElementById('total')
-  expense_added.innerHTML="";
-
-  for(var x=0; x<sessionStorage.length; x++){
-    var a = sessionStorage.key(x);
-    var b = sessionStorage.getItem(a);
-    if (a == ""){
-      alert("Please Type in a Category");
-    }
-    else if (b == "") {
-      alert("Please Type in the Amount Spent");
-    }
-    else{
-      expense_added.innerHTML += a+"  -  "+"$"+b+"<br />";
-      }
-
-  }
-}
+category = [];
+expense = []
+function addRecord() {
+  var inp = document.getElementById('category1');
+  var blah = document.getElementById('expense')
+  expense.push(blah.value);
+  category.push(inp.value);
+  inp.value = "";
+  blah.value="";
+  document.getElementById("expense_added").innerHTML = category.join("<br/> ");
 
 function sum(){
     if(sessionStorage.length > 0){
