@@ -16,7 +16,7 @@ function addRecord() {
   inp.value = "";
   blah.value="";
   document.getElementById("expense_added").innerHTML = category.join("<br/> ");
-  document.getElementById("expense_added2").innerHTML = "$"+expense.join("<br/>")
+  document.getElementById("expense_added2").innerHTML = "$" +expense.join("<br/>")
   console.log(expense)
   document.getElementById("total").innerHTML = "Total: - $"+expense.reduce(myFunc);
   document.getElementById("expense_total").innerHTML = "$"+expense.reduce(myFunc);
