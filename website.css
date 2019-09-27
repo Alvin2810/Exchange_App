@@ -6,6 +6,10 @@ body{
 h1,h2,h3,h4,p{
   text-align:center;
 }
+.expense_stuff{
+  display:grid;
+  grid-template-columns: auto auto;
+}
 #top{
   display:grid;
   grid-template-columns: auto auto;
