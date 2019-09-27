@@ -1,8 +1,12 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <link href="website.css" rel="stylesheet">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    Expense Tracking App
+  </title>
 </head>
 <body>
 <h1>Expense Tracking App</h1>
@@ -10,8 +14,8 @@
 <div id="top">
   <section id="expense_amount">
     <h3>Expense</h3>
-    <h4 id="expense_total"></h4>
-    <section class="expense_stuff"><p id="expense_added"></p><p id="expense_added2"></p></section>
+    <h4 id="expense_total">$0</h4>
+    <div  class="expense_stuff"><p id="expense_added"></p><p id="expense_added2"></p></div>
   </section>
   <section id="income_amount">
     <h3>Income</h3>
@@ -23,7 +27,7 @@
  <section id="add_expense">
     <form>
       <h4>Adding Expense</h4>
-      <section class="category_selection"
+      <div class="category_selection">
     <label for="category1">Choose a Category:</label>
 
 <select id="category1">
@@ -44,11 +48,13 @@
    <option value="Toiletry">Toiletry</option>
    <option value="Transport">Transport</option>
 </select>
-</section>
+</div>
+
       <p>Amount: $ <input size="15" type="text" id="expense"></p>
       <p><input type="button" id="button1" value="Add Expense"></p>
    </form>
  </section>
+</div>
   <script src="website.js"></script>
  </body>
 </html>
